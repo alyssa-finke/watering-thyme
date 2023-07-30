@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+  /* background-color: #B4B8A6; */
+  background-image: url("../public/backgroundPattern.png");
+  /* background-repeat: repeat-x; */
+}
+
+h1 {
+  text-align: center;
+  color: #52584D;
+  font-family: 'Dancing Script', cursive;
+  font-size: 6em;
+}
+
+.new-plant-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.new-plant-submit button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #52584D;
+  background-color:
+    #52584D;
+  color: white;
+  border-radius: 12px;
+}
+
+.new-plant-submit button:hover,
+.new-plant-submit button:active {
+  background-color: #B5A4A3;
+  border-color: #B5A4A3;
+}

@@ -1,0 +1,39 @@
+.new-plant {
+    background-color: #B5A4A3;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-plant button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #52584D;
+    background-color:
+        #52584D;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.new-plant button:hover,
+.new-plant button:active {
+    background-color: #B4B8A6;
+    border-color: #B4B8A6;
+}
+
+.new-plant button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.new-plant button.alternative:hover,
+.new-plant button.alternative:active {
+    background-color: #B5A4A3;
+}
