@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Plants from './components/Plants/Plants'
 import NewPlant from './components/NewPlant/NewPlant';
+import WaterAlert from './components/Plants/WaterAlert';
 
 const initialPlants = [
   { id: 1, name: 'Pothos', firstWater: new Date(2023, 5, 1), frequency: '1' },
@@ -34,6 +35,7 @@ const App = () => {
   return (
     <div>
       <header>
+        <WaterAlert plants={plantInfo}></WaterAlert>
         <h1>Thyme</h1>
       </header>
       <div className="new-plant-submit">
