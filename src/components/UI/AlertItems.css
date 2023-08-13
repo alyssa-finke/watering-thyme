@@ -9,19 +9,27 @@
 }
 
 
-.plant-info {
+.plant-to-water {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    /* flex-flow: column-reverse; */
-    /* justify-content: flex-start; */
-    /* flex: 1; */
+    text-align: center;
+    flex: 1;
 }
 
 .individual-alert h2 {
     color: #3a3a3a;
     font-size: 1rem;
-    flex: 1;
-    margin: 0 1rem;
+    margin: 0 .2rem 0 .5rem;
     color: white;
+}
+
+.individual-alert button {
+    color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color:
+        #B5A4A3;
+    position: relative;
+    top: -10px;
+    right: -7px;
 }

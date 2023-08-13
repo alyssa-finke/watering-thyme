@@ -8,13 +8,7 @@
     font: inherit;
 }
 
-.closebtn {
-    margin-left: 15px;
+
+.alert-message {
     color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
 }

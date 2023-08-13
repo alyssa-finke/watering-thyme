@@ -4,21 +4,12 @@ import './WaterAlert.css';
 import WaterList from './WaterList';
 
 
-
 const WaterAlert = props => {
-    // const [isShow, setShow] = useState(true);
-    // const handleClose = (e) => {
-    //     e.preventDefault();
-    //     setShow(false);
-    // };
-
     return (
         <Card className="alert-card">
             <div>
-                {/*<div className="alert-title" show={isShow}>Water your plants!
-                    <span className="closebtn" onClick={handleClose}>   &times;
-    </span></div>*/}
                 <div>
+                    <h2 className="alert-message">These plants are thirsty!</h2>
                     {props.plants.map((plantInfo) => (
                         <WaterList
                             key={plantInfo.id}
