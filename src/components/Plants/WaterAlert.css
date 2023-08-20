@@ -1,14 +1,36 @@
 .alert-card {
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
-    margin: 1rem 0;
     background-color:
         #52584D;
     font: inherit;
 }
 
-
 .alert-message {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+
+}
+
+.alert-message h2 {
     color: white;
+}
+
+
+.open {
+    display: block;
+}
+
+.close {
+    display: none;
+}
+
+.alert-card button {
+    color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color:
+        #52584D;
+    float: right;
+    margin: 10px;
 }
