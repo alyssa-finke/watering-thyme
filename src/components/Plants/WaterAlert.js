@@ -5,7 +5,7 @@ import WaterList from './WaterList';
 
 
 const WaterAlert = props => {
-    const [showAlert, toggleShowAlert] = useState(true);
+    let [showAlert, toggleShowAlert] = useState(true);
 
     //set today so that can compare water date to today
     var today = new Date();
@@ -30,6 +30,12 @@ const WaterAlert = props => {
         return daysDifference >= 0 && (daysDifference % waterFrequency === 0);
 
     });
+
+    //if it's not water day for any of the plants, don't show the alert box
+    const filteredCount = filteredData.length;
+    if (filteredCount === 0) {
+        showAlert = false;
+    }
 
     return (
         <div>
