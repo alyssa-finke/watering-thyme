@@ -6,9 +6,12 @@ import React, { useState } from 'react';
 const WaterList = (props) => {
     const [active, setActive] = useState(false);
 
+    //close individual alert and recalculate in parent to see if should close outer alert box
     function closeItem() {
         setActive(true);
+        props.onClick();
     }
+
 
     return (
         <div className={active ? "close" : "open"}>
