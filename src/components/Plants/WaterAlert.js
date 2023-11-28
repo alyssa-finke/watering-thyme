@@ -12,19 +12,19 @@ const WaterAlert = props => {
     today.setHours(0, 0, 0, 0);
 
     //keep for now while testing filter
-    var pseudoDay = new Date(2023, 9, 10);
-    console.log('Pseudo Day');
-    console.log(pseudoDay);
+    //var pseudoDay = new Date(2023, 9, 10);
+    //console.log('Pseudo Day');
+    //console.log(pseudoDay);
 
     const filteredData = props.plants.filter((item) => {
         //get each firstWater as date object
         const firstWaterDate = new Date(item.firstWater);
 
         //Take the difference between today and the firstWaterDate - converted to days
-        const daysDifference = Math.floor((pseudoDay - firstWaterDate) / (1000 * 60 * 60 * 24));
+        const daysDifference = Math.floor((today - firstWaterDate) / (1000 * 60 * 60 * 24));
 
-        //Take water frequency from props
-        const waterFrequency = item.frequency;
+        //Take water frequency from props and multiply by 7 days
+        const waterFrequency = item.frequency * 7;
 
         //return if evenly divisible by waterFrequency (ie 7 days, 14 days, 21 days)
         return daysDifference >= 0 && (daysDifference % waterFrequency === 0);
