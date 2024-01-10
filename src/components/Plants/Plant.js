@@ -12,6 +12,7 @@ const Plant = (props) => {
                     <h2>{props.name}</h2>
                     <div className="water-frequency">{props.frequency}</div>
                 </div>
+                <button id={props.id} className="delete-button" onClick={() => props.buttonClickHandler(props.id)}>Delete</button>
             </Card>
         </li>
     );

@@ -61,3 +61,15 @@
     display: none;
   }
 }
+
+.delete-button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #52584D;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-right: 10px;
+
+}
