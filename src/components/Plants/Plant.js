@@ -4,6 +4,11 @@ import './Plant.css'
 
 const Plant = (props) => {
 
+    const handleDeleteItem = (id) => {
+        console.log('made it into handleDeleteItem')
+        console.log(id);
+        props.onDeletePlant(id);
+    };
     return (
         <li>
             <Card className="individual-plant">
@@ -12,7 +17,7 @@ const Plant = (props) => {
                     <h2>{props.name}</h2>
                     <div className="water-frequency">{props.frequency}</div>
                 </div>
-                <button id={props.id} className="delete-button" onClick={() => props.buttonClickHandler(props.id)}>Delete</button>
+                <button id={props.id} className="delete-button" onClick={() => handleDeleteItem(props.id)}>Delete</button>
             </Card>
         </li>
     );

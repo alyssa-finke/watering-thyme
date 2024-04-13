@@ -4,9 +4,11 @@ import PlantForm from './PlantForm';
 
 const NewPlant = (props) => {
     const savePlantInfoHandler = (enteredPlantInfo) => {
+
         const plantInfo = {
             ...enteredPlantInfo,
-            id: Math.random().toString()
+
+            id: Math.floor(Math.random() * 100).toString()
         };
         console.log(plantInfo);
         props.onAddPlant(plantInfo);

@@ -6,6 +6,7 @@ import PlantList from './PlantList';
 
 const Plants = (props) => {
     const [filteredFrequency, setFilteredFrequency] = useState('1');
+    //const [items, setItems] = useState(filteredFrequency); //should this be filteredFrequency or props?
 
     const filterChangeHandler = selectedFrequency => {
         setFilteredFrequency(selectedFrequency)
@@ -16,11 +17,10 @@ const Plants = (props) => {
     });
 
 
-
     return (
         <Card className="plants">
             <PlantFilter selected={filteredFrequency} onChangeFilter={filterChangeHandler} />
-            <PlantList plant={filteredPlants} />
+            <PlantList plant={filteredPlants} onDeletePlant={props.onDeletePlant} />
         </Card>
     );
 }

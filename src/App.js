@@ -13,6 +13,7 @@ const initialPlants = [
 const App = () => {
 
   const [plantInfo, setNewPlant] = useState(initialPlants);
+  //const [plantInfo, setItems] = useState(initialPlants)
   const [show, toggleShow] = useState(false);
   let buttonValue = show ? "Close" : "Add Plant";
 
@@ -23,6 +24,15 @@ const App = () => {
       return [plant, ...prevPlants];
     });
     console.log(plantInfo);
+  };
+
+  //why isn't the id passing?
+  const deletePlantHandler = (id) => {
+    console.log(id);
+    setNewPlant((items) => {
+      console.log('Pressed Delete!');
+      return items.filter(item => item.id !== 1);
+    });
   };
 
 
@@ -37,7 +47,7 @@ const App = () => {
       </div>{
         show ? <NewPlant onAddPlant={addPlantHandler} /> : null
       }
-      <Plants plants={plantInfo} />
+      <Plants plants={plantInfo} onDeletePlant={deletePlantHandler} />
     </div>
   );
 }
