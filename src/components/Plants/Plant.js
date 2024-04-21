@@ -5,8 +5,6 @@ import './Plant.css'
 const Plant = (props) => {
 
     const handleDeleteItem = (id) => {
-        console.log('made it into handleDeleteItem')
-        console.log(id);
         props.onDeletePlant(id);
     };
     return (

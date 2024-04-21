@@ -63,7 +63,7 @@ const PlantForm = (props) => {
                     <label>
                         Date of First Water
                     </label>
-                    <input type="date" min="2022-01-01" max="2024-01-01" value={enteredDate} onChange={dateChangeHandler} />
+                    <input type="date" min="2022-01-01" max="2030-01-01" value={enteredDate} onChange={dateChangeHandler} />
                 </div>
             </div>
             <div className="new-plant__actions"><button type="submit">Add Plant</button></div>

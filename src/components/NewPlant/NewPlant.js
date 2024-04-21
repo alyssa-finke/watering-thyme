@@ -4,7 +4,6 @@ import PlantForm from './PlantForm';
 
 const NewPlant = (props) => {
     const savePlantInfoHandler = (enteredPlantInfo) => {
-
         const plantInfo = {
             ...enteredPlantInfo,
 
